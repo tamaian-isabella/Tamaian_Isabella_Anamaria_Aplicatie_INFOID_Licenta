@@ -124,7 +124,7 @@ def generate_pdf_report(c_vals, risk_label, conf_str, timestamp, metrics_df):
     pdf.set_font("Helvetica", "I", 8)
     pdf.multi_cell(0, 4, clean_pdf_text("AVIZ MEDICAL: Acest document este generat de un sistem software bazat pe inteligenta artificiala in scop educational si de asistenta a deciziilor. Nu reprezinta un diagnostic medical certificat si nu inlocuieste consultul medical de specialitate."))
     
-    return bytes(pdf.output())
+    return pdf.output(dest='S').encode('latin-1')
 
 
 feature_names = ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
