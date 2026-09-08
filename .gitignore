@@ -1,0 +1,12 @@
+# Mediu virtual
+heart_env/
+
+# Fisiere binare serializate (eliminarea fisierelor binare compilate)
+*.pkl
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Metrici regenerate la rulare 
+model_metrics.csv
